@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_setup">
+
+    <fragment
+        android:id="@+id/navigation_setup"
+        android:name="br.net.rodmonte.rowicoce.ui.setup.SetupFragment"
+        android:label="@string/title_setup"
+        tools:layout="@layout/fragment_setup" />
+
+    <fragment
+        android:id="@+id/navigation_movement"
+        android:name="br.net.rodmonte.rowicoce.ui.movement.MovementFragment"
+        android:label="@string/title_movement"
+        tools:layout="@layout/fragment_movement" />
+
+    <fragment
+        android:id="@+id/navigation_devices"
+        android:name="br.net.rodmonte.rowicoce.ui.devices.DevicesFragment"
+        android:label="@string/title_devices"
+        tools:layout="@layout/fragment_devices" />
+</navigation>

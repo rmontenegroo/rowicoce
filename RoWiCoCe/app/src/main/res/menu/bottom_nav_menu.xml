@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_setup"
+        android:icon="@drawable/setup_screen"
+        android:title="@string/title_setup" />
+
+    <item
+        android:id="@+id/navigation_movement"
+        android:icon="@drawable/movement_arrows"
+        android:title="@string/title_movement" />
+
+    <item
+        android:id="@+id/navigation_devices"
+        android:icon="@drawable/custom_commands"
+        android:title="@string/title_devices" />
+
+</menu>

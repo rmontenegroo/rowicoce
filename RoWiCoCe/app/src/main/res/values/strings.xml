@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RoWiCoCe</string>
+    <string name="title_setup">Setup</string>
+    <string name="title_movement">Movement</string>
+    <string name="title_devices">Devices</string>
+    <string name="robot_service_address_initial">192.168.15.139</string>
+    <string name="robot_service_port_initial">5050</string>
+    <string name="button_test_connection_label">Test connection</string>
+    <string name="robot_service_connection_properties_title_label">Robot service connection properties</string>
+    <string name="address_label">Address:</string>
+    <string name="port_label">Port:</string>
+    <string name="stop_button_content_description">Stop</string>
+    <string name="rotate_right_button_content_description">Rotate right</string>
+    <string name="rotate_left_button_content_description">Rotate left</string>
+    <string name="right_button_content_description">Right</string>
+    <string name="left_button_content_description">Left</string>
+    <string name="forward_button_content_description">Forward</string>
+    <string name="backward_button_content_description">Backward</string>
+</resources>
