@@ -6,27 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.custom.CustomFragment">
 
-    <Button
-        android:id="@+id/custom9Button"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveCustomCommandsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="46dp"
-        android:text="@string/custom_button_send_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/custom9Text"
-        app:layout_constraintTop_toTopOf="@+id/custom9Text" />
-
-    <Button
-        android:id="@+id/custom10Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="46dp"
-        android:text="@string/custom_button_send_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/custom10Text"
-        app:layout_constraintTop_toTopOf="@+id/custom10Text" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:clickable="true"
+        android:contentDescription="@string/save_custom_commands"
+        android:focusable="true"
+        android:src="@android:drawable/ic_menu_save"
+        app:backgroundTint="@color/design_default_color_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/custom7Button"
@@ -60,17 +52,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/custom6Text"
         app:layout_constraintTop_toTopOf="@+id/custom6Text" />
-
-    <Button
-        android:id="@+id/custom8Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="46dp"
-        android:text="@string/custom_button_send_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/custom8Text"
-        app:layout_constraintTop_toTopOf="@+id/custom8Text" />
 
     <Button
         android:id="@+id/custom4Button"
@@ -121,15 +102,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="text"
         android:minHeight="48dp"
         android:text="@string/custom1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/custom_screen_title"
-        tools:ignore="LabelFor"
-        android:importantForAutofill="no" />
+        tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/custom2Text"
@@ -220,51 +201,6 @@
         app:layout_constraintTop_toBottomOf="@+id/custom6Text"
         tools:ignore="HardcodedText,LabelFor"
         android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/custom8Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="@string/custom8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom7Text"
-        tools:ignore="LabelFor"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/custom9Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="@string/custom9"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom8Text"
-        tools:ignore="LabelFor"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/custom10Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="@string/custom10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom9Text"
-        tools:ignore="LabelFor" />
 
     <Button
         android:id="@+id/custom1Button"

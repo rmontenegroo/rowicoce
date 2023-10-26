@@ -42,4 +42,6 @@
     <string name="custom6">custom6</string>
     <string name="custom8">custom8</string>
     <string name="custom9">custom9</string>
+    <string name="save_connection_data">Save connection data</string>
+    <string name="save_custom_commands">Save custom commands</string>
 </resources>
