@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import br.net.rodmonte.rowicoce.R
+import br.net.rodmonte.rowicoce.RobotServiceViewModel
 import br.net.rodmonte.rowicoce.databinding.FragmentMovementBinding
 
 class MovementFragment : Fragment() {
@@ -20,6 +23,8 @@ class MovementFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val TAG = "Movement Fragment"
+
+    private val robotServiceViewModel: RobotServiceViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,13 +41,126 @@ class MovementFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.forwardButton.setOnTouchListener { v, event ->
-            Log.w(TAG, v.toString())
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
-                    binding.forwardButton.setImageResource(R.drawable.arrow_up_pressed)
+                    (v as ImageButton).setImageResource(R.drawable.arrow_up_pressed)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.forward_pressed_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
                 }
                 MotionEvent.ACTION_UP -> {
-                    binding.forwardButton.setImageResource(R.drawable.arrow_up)
+                    (v as ImageButton).setImageResource(R.drawable.arrow_up)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.forward_released_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+            }
+            true
+        }
+
+        binding.backwardButton.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    (v as ImageButton).setImageResource(R.drawable.arrow_down_pressed)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.backward_pressed_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+                MotionEvent.ACTION_UP -> {
+                    (v as ImageButton).setImageResource(R.drawable.arrow_down)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.backward_released_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+            }
+            true
+        }
+
+        binding.rightButton.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    (v as ImageButton).setImageResource(R.drawable.arrow_right_pressed)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.right_pressed_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+                MotionEvent.ACTION_UP -> {
+                    (v as ImageButton).setImageResource(R.drawable.arrow_right)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.right_released_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+            }
+            true
+        }
+
+        binding.leftButton.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    (v as ImageButton).setImageResource(R.drawable.arrow_left_pressed)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.left_pressed_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+                MotionEvent.ACTION_UP -> {
+                    (v as ImageButton).setImageResource(R.drawable.arrow_left)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.left_released_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+            }
+            true
+        }
+
+        binding.stopButton.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    (v as ImageButton).setImageResource(R.drawable.stop_command_pressed)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.stop_pressed_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+                MotionEvent.ACTION_UP -> {
+                    (v as ImageButton).setImageResource(R.drawable.stop_command)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.stop_released_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+            }
+            true
+        }
+
+        binding.rotateRightButton.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    (v as ImageButton).setImageResource(R.drawable.rotate_right_pressed)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.rotate_right_pressed_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+                MotionEvent.ACTION_UP -> {
+                    (v as ImageButton).setImageResource(R.drawable.rotate_right)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.rotate_right_released_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+            }
+            true
+        }
+
+        binding.rotateLeftButton.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    (v as ImageButton).setImageResource(R.drawable.rotate_left_pressed)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.rotate_left_pressed_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
+                }
+                MotionEvent.ACTION_UP -> {
+                    (v as ImageButton).setImageResource(R.drawable.rotate_left)
+                    if (robotServiceViewModel.robotService.value?.sendMessage(getString(R.string.rotate_left_released_message)) == false) {
+                        Log.w(TAG, "Message has not been sent")
+                    }
                 }
             }
             true

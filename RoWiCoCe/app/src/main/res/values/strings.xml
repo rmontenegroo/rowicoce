@@ -16,4 +16,18 @@
     <string name="left_button_content_description">Left</string>
     <string name="forward_button_content_description">Forward</string>
     <string name="backward_button_content_description">Backward</string>
+    <string name="forward_pressed_message">forward_pressed</string>
+    <string name="forward_released_message">forward_released</string>
+    <string name="backward_pressed_message">backward_pressed</string>
+    <string name="backward_released_message">backward_released</string>
+    <string name="right_pressed_message">right_pressed</string>
+    <string name="right_released_message">right_released</string>
+    <string name="left_pressed_message">left_pressed</string>
+    <string name="left_released_message">left_released</string>
+    <string name="stop_pressed_message">stop_pressed</string>
+    <string name="stop_released_message">stop_released</string>
+    <string name="rotate_right_pressed_message">rotate_right_pressed</string>
+    <string name="rotate_right_released_message">rotate_right_released</string>
+    <string name="rotate_left_pressed_message">rotate_left_pressed</string>
+    <string name="rotate_left_released_message">rotate_left_released</string>
 </resources>
