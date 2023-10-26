@@ -5,20 +5,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
-import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import br.net.rodmonte.rowicoce.RobotService
 import br.net.rodmonte.rowicoce.RobotServiceViewModel
 import br.net.rodmonte.rowicoce.databinding.FragmentSetupBinding
 
 class SetupFragment : Fragment() {
 
-    private val TAG = "SetupFragment"
+    private val TAG = "Setup Fragment"
 
     private var _binding: FragmentSetupBinding? = null
 
@@ -64,7 +61,7 @@ class SetupFragment : Fragment() {
 
             binding.buttonTestConnection.isClickable = false
 
-            var message: String = "Connection failed!"
+            var message = "Connection failed!"
 
             if (robotServiceViewModel.robotService.value?.testConnection() == true){
                 message = "Connection succeeded!"

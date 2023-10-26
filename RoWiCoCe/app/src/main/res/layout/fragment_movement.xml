@@ -10,7 +10,6 @@
         android:id="@+id/stopButton"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:background="@null"
         android:contentDescription="@string/stop_button_content_description"
         android:src="@drawable/stop_command"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,10 +21,9 @@
 
     <ImageButton
         android:id="@+id/forwardButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="32dp"
-        android:background="@null"
         android:contentDescription="@string/forward_button_content_description"
         android:src="@drawable/arrow_up"
         app:layout_constraintBottom_toTopOf="@+id/stopButton"
@@ -39,7 +37,6 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
-        android:background="@null"
         android:contentDescription="@string/backward_button_content_description"
         android:src="@drawable/arrow_down"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +51,6 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginEnd="32dp"
-        android:background="@null"
         android:contentDescription="@string/left_button_content_description"
         android:src="@drawable/arrow_left"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,7 +64,6 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
-        android:background="@null"
         android:contentDescription="@string/right_button_content_description"
         android:src="@drawable/arrow_right"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,7 +76,6 @@
         android:id="@+id/rotateLeftButton"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:background="@null"
         android:contentDescription="@string/rotate_left_button_content_description"
         android:src="@drawable/rotate_left"
         app:layout_constraintBottom_toTopOf="@+id/leftButton"
@@ -93,16 +87,26 @@
 
     <ImageButton
         android:id="@+id/rotateRightButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:contentDescription="@string/rotate_right_button_content_description"
         android:src="@drawable/rotate_right"
         app:layout_constraintBottom_toTopOf="@+id/rightButton"
-        app:layout_constraintEnd_toEndOf="@+id/rightButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/rightButton"
         app:layout_constraintTop_toTopOf="@+id/forwardButton"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/movement_screen_title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movement_screen_title_label"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

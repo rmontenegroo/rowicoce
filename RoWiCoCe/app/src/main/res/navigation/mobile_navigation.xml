@@ -18,8 +18,8 @@
         tools:layout="@layout/fragment_movement" />
 
     <fragment
-        android:id="@+id/navigation_devices"
-        android:name="br.net.rodmonte.rowicoce.ui.devices.DevicesFragment"
-        android:label="@string/title_devices"
-        tools:layout="@layout/fragment_devices" />
+        android:id="@+id/navigation_custom"
+        android:name="br.net.rodmonte.rowicoce.ui.custom.CustomFragment"
+        android:label="@string/title_custom"
+        tools:layout="@layout/fragment_custom" />
 </navigation>

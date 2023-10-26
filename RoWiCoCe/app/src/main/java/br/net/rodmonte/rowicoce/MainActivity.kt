@@ -8,7 +8,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -43,15 +42,15 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_setup, R.id.navigation_movement, R.id.navigation_devices
+                R.id.navigation_setup, R.id.navigation_movement, R.id.navigation_custom
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        robotServiceViewModel.robotService.observe(this, Observer { item ->
+        robotServiceViewModel.robotService.observe(this) { item ->
             Log.w("MainActivity", item.toString())
-        })
+        }
 
         /*
             Adicionado para não ocorrer erro ao fazer conexão via socket
