@@ -54,4 +54,10 @@
     <string name="faster">Faster</string>
     <string name="slower">Slower</string>
     <string name="buzz">Buzz!</string>
+    <string name="buzzer_pressed_message">buzzer_pressed</string>
+    <string name="speed_increase_pressed_message">speed_increase_pressed</string>
+    <string name="speed_increase_released_message">speed_increase_released</string>
+    <string name="speed_decrease_pressed_message">speed_decrease_pressed</string>
+    <string name="speed_decrease_released_message">speed_decrease_released</string>
+    <string name="buzzer_released_message">buzzer_released</string>
 </resources>
