@@ -7,42 +7,30 @@
     tools:context=".ui.setup.SetupFragment">
 
     <TextView
-        android:id="@+id/setup_title_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/setup_screen_title_label"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:text="@string/address_label"
-        app:layout_constraintStart_toStartOf="@+id/editTextAddress"
-        app:layout_constraintTop_toBottomOf="@+id/setup_title_text" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextAddress" />
 
     <EditText
         android:id="@+id/editTextAddress"
-        android:layout_width="140dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="text"
         android:minHeight="48dp"
         android:text="@string/robot_service_address_initial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextPort"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="LabelFor,TextSizeCheck"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209"
+        tools:ignore="LabelFor,TextSizeCheck" />
 
     <TextView
         android:id="@+id/textView3"
@@ -54,25 +42,25 @@
 
     <EditText
         android:id="@+id/editTextPort"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
         android:text="@string/robot_service_port_initial"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/editTextAddress"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/editTextAddress"
         tools:ignore="LabelFor" />
 
     <Button
         android:id="@+id/buttonTestConnection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:text="@string/button_test_connection_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -84,12 +72,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="64dp"
         android:clickable="true"
         android:contentDescription="@string/save_connection_data"
+        android:focusable="true"
         android:src="@android:drawable/ic_menu_save"
         app:backgroundTint="@color/design_default_color_background"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:focusable="true" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonTestConnection" />
 </androidx.constraintlayout.widget.ConstraintLayout>

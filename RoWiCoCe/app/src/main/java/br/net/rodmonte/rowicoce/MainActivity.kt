@@ -1,5 +1,6 @@
 package br.net.rodmonte.rowicoce
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.os.StrictMode
 import android.util.Log
@@ -10,7 +11,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
@@ -53,6 +53,7 @@ class MainActivity : AppCompatActivity() {
             Log.w("MainActivity", item.toString())
         }
 
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         /*
             Adicionado para não ocorrer erro ao fazer conexão via socket
          */

@@ -96,6 +96,7 @@ class SetupFragment : Fragment() {
 
         binding.buttonTestConnection.setOnClickListener {
 
+            binding.buttonTestConnection.isEnabled = false
             binding.buttonTestConnection.isClickable = false
 
             var message = "Connection failed!"
@@ -106,6 +107,7 @@ class SetupFragment : Fragment() {
 
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 
+            binding.buttonTestConnection.isEnabled = true
             binding.buttonTestConnection.isClickable = true
         }
     }

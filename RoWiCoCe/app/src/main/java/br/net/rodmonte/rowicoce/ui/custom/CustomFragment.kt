@@ -38,18 +38,15 @@ class CustomFragment : Fragment() {
         var custom3 = "custom3"
         var custom4 = "custom4"
         var custom5 = "custom5"
-        var custom6 = "custom6"
-        var custom7 = "custom7"
 
         val sharedPref :SharedPreferences? = this.activity?.getSharedPreferences("br.net.rodmonte.rowicoce.preferences", Context.MODE_PRIVATE)
+
         if (sharedPref != null) {
             custom1 = sharedPref.getString("custom1_key", custom1) as String
             custom2 = sharedPref.getString("custom2_key", custom2) as String
             custom3 = sharedPref.getString("custom3_key", custom3) as String
             custom4 = sharedPref.getString("custom4_key", custom4) as String
             custom5 = sharedPref.getString("custom5_key", custom5) as String
-            custom6 = sharedPref.getString("custom6_key", custom6) as String
-            custom7 = sharedPref.getString("custom7_key", custom7) as String
         }
 
         binding.custom1Text.setText(custom1)
@@ -57,8 +54,6 @@ class CustomFragment : Fragment() {
         binding.custom3Text.setText(custom3)
         binding.custom4Text.setText(custom4)
         binding.custom5Text.setText(custom5)
-        binding.custom6Text.setText(custom6)
-        binding.custom7Text.setText(custom7)
 
         return binding.root
     }
@@ -72,8 +67,6 @@ class CustomFragment : Fragment() {
             val custom3 = binding.custom3Text.text.toString()
             val custom4 = binding.custom4Text.text.toString()
             val custom5 = binding.custom5Text.text.toString()
-            val custom6 = binding.custom6Text.text.toString()
-            val custom7 = binding.custom7Text.text.toString()
 
             val sharedPref : SharedPreferences? = this.activity?.getSharedPreferences("br.net.rodmonte.rowicoce.preferences", Context.MODE_PRIVATE)
 
@@ -86,8 +79,6 @@ class CustomFragment : Fragment() {
                     this.putString("custom3_key", custom3)
                     this.putString("custom4_key", custom4)
                     this.putString("custom5_key", custom5)
-                    this.putString("custom6_key", custom6)
-                    this.putString("custom7_key", custom7)
                     this.apply()
                 }
                 Toast.makeText(context, "Data has been saved", Toast.LENGTH_SHORT).show()
@@ -116,16 +107,6 @@ class CustomFragment : Fragment() {
 
         binding.custom5Text.doAfterTextChanged { text ->
             binding.custom5Button.isEnabled = text.toString() != ""
-            binding.saveCustomCommandsButton.isEnabled = text.toString() != ""
-        }
-
-        binding.custom6Text.doAfterTextChanged { text ->
-            binding.custom6Button.isEnabled = text.toString() != ""
-            binding.saveCustomCommandsButton.isEnabled = text.toString() != ""
-        }
-
-        binding.custom7Text.doAfterTextChanged { text ->
-            binding.custom7Button.isEnabled = text.toString() != ""
             binding.saveCustomCommandsButton.isEnabled = text.toString() != ""
         }
 
@@ -167,24 +148,6 @@ class CustomFragment : Fragment() {
 
         binding.custom5Button.setOnClickListener {
             val message : String = binding.custom5Text.text.toString()
-            if (message != "") {
-                if (robotServiceViewModel.robotService.value?.sendMessage(message) == false) {
-                    Log.w(TAG, "Message has not been sent")
-                }
-            }
-        }
-
-        binding.custom6Button.setOnClickListener {
-            val message : String = binding.custom6Text.text.toString()
-            if (message != "") {
-                if (robotServiceViewModel.robotService.value?.sendMessage(message) == false) {
-                    Log.w(TAG, "Message has not been sent")
-                }
-            }
-        }
-
-        binding.custom7Button.setOnClickListener {
-            val message: String = binding.custom7Text.text.toString()
             if (message != "") {
                 if (robotServiceViewModel.robotService.value?.sendMessage(message) == false) {
                     Log.w(TAG, "Message has not been sent")

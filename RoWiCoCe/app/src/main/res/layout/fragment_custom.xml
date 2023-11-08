@@ -4,214 +4,173 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.custom.CustomFragment">
+    tools:context=".ui.custom.CustomFragment"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-20dp">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/saveCustomCommandsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="64dp"
         android:clickable="true"
         android:contentDescription="@string/save_custom_commands"
         android:focusable="true"
         android:src="@android:drawable/ic_menu_save"
         app:backgroundTint="@color/design_default_color_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/custom7Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="46dp"
-        android:text="@string/custom_button_send_label"
+        app:layout_constraintBottom_toBottomOf="@+id/custom6Button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/custom7Text"
-        app:layout_constraintTop_toTopOf="@+id/custom7Text" />
-
-    <Button
-        android:id="@+id/custom5Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="46dp"
-        android:text="@string/custom_button_send_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/custom5Text"
-        app:layout_constraintTop_toTopOf="@+id/custom5Text" />
-
-    <Button
-        android:id="@+id/custom6Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="46dp"
-        android:text="@string/custom_button_send_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/custom6Text"
-        app:layout_constraintTop_toTopOf="@+id/custom6Text" />
-
-    <Button
-        android:id="@+id/custom4Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="46dp"
-        android:text="@string/custom_button_send_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/custom4Text"
-        app:layout_constraintTop_toTopOf="@+id/custom4Text" />
-
-    <Button
-        android:id="@+id/custom3Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="46dp"
-        android:text="@string/custom_button_send_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/custom3Text"
-        app:layout_constraintTop_toTopOf="@+id/custom3Text" />
-
-    <Button
-        android:id="@+id/custom2Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="46dp"
-        android:text="@string/custom_button_send_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/custom2Text"
-        app:layout_constraintTop_toTopOf="@+id/custom2Text" />
-
-    <TextView
-        android:id="@+id/custom_screen_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/custom_screen_title_label"
-        android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/custom1Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="48dp"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="@string/custom1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom_screen_title"
-        tools:ignore="LabelFor" />
-
-    <EditText
-        android:id="@+id/custom2Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="@string/custom2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom1Text"
-        tools:ignore="LabelFor"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/custom3Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="@string/custom3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom2Text"
-        tools:ignore="LabelFor"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/custom4Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="@string/custom4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom3Text"
-        tools:ignore="LabelFor" />
-
-    <EditText
-        android:id="@+id/custom5Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="@string/custom5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom4Text"
-        tools:ignore="LabelFor"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/custom6Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="@string/custom6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom5Text"
-        tools:ignore="LabelFor"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/custom7Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:text="custom7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/custom6Text"
-        tools:ignore="HardcodedText,LabelFor"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="@+id/custom6Button" />
 
     <Button
         android:id="@+id/custom1Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="46dp"
         android:text="@string/custom_button_send_label"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/custom1Text"
         app:layout_constraintTop_toTopOf="@+id/custom1Text"
         tools:ignore="HardcodedText,DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/custom2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/custom_button_send_label"
+        app:layout_constraintStart_toEndOf="@+id/custom2Text"
+        app:layout_constraintTop_toTopOf="@+id/custom2Text" />
+
+    <Button
+        android:id="@+id/custom3Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/custom_button_send_label"
+        app:layout_constraintStart_toEndOf="@+id/custom3Text"
+        app:layout_constraintTop_toTopOf="@+id/custom3Text" />
+
+    <Button
+        android:id="@+id/custom4Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/custom_button_send_label"
+        app:layout_constraintStart_toEndOf="@+id/custom4Text"
+        app:layout_constraintTop_toTopOf="@+id/custom1Button" />
+
+    <Button
+        android:id="@+id/custom5Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/custom_button_send_label"
+        app:layout_constraintStart_toEndOf="@+id/custom5Text"
+        app:layout_constraintTop_toTopOf="@+id/custom2Button"
+        tools:ignore="HardcodedText,DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/custom6Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/custom_button_send_label"
+        app:layout_constraintStart_toEndOf="@+id/custom6Text"
+        app:layout_constraintTop_toTopOf="@+id/custom3Button"
+        tools:ignore="HardcodedText,DuplicateSpeakableTextCheck" />
+
+    <EditText
+        android:id="@+id/custom1Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="@string/custom1"
+        app:layout_constraintBottom_toTopOf="@+id/custom2Text"
+        app:layout_constraintEnd_toStartOf="@+id/custom1Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/custom2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="@string/custom2"
+        app:layout_constraintBottom_toTopOf="@+id/custom3Text"
+        app:layout_constraintEnd_toStartOf="@+id/custom2Button"
+        app:layout_constraintStart_toStartOf="@+id/custom1Text"
+        app:layout_constraintTop_toBottomOf="@+id/custom1Text"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/custom3Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="@string/custom3"
+        app:layout_constraintEnd_toStartOf="@+id/custom3Button"
+        app:layout_constraintStart_toStartOf="@+id/custom2Text"
+        app:layout_constraintTop_toBottomOf="@+id/custom2Text"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/custom4Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="@string/custom4"
+        app:layout_constraintStart_toEndOf="@+id/custom1Button"
+        app:layout_constraintTop_toTopOf="@+id/custom1Button"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/custom5Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="@string/custom5"
+        app:layout_constraintBottom_toBottomOf="@+id/custom5Button"
+        app:layout_constraintStart_toStartOf="@+id/custom4Text"
+        app:layout_constraintTop_toTopOf="@+id/custom5Button"
+        app:layout_constraintVertical_bias="0.322"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/custom6Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:text="@string/custom6"
+        app:layout_constraintBottom_toBottomOf="@+id/custom6Button"
+        app:layout_constraintStart_toEndOf="@+id/custom3Button"
+        app:layout_constraintStart_toStartOf="@+id/custom5Text"
+        app:layout_constraintTop_toTopOf="@+id/custom6Button"
+        tools:ignore="LabelFor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
