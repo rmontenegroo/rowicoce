@@ -44,4 +44,14 @@
     <string name="custom9">custom9</string>
     <string name="save_connection_data">Save connection data</string>
     <string name="save_custom_commands">Save custom commands</string>
+    <string name="stop">Stop</string>
+    <string name="forward">Forward</string>
+    <string name="backward">Backward</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
+    <string name="r_r">R. R.</string>
+    <string name="r_l">R. L.</string>
+    <string name="faster">Faster</string>
+    <string name="slower">Slower</string>
+    <string name="buzz">Buzz!</string>
 </resources>
