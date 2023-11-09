@@ -40,8 +40,6 @@
     <string name="custom4">custom4</string>
     <string name="custom5">custom5</string>
     <string name="custom6">custom6</string>
-    <string name="custom8">custom8</string>
-    <string name="custom9">custom9</string>
     <string name="save_connection_data">Save connection data</string>
     <string name="save_custom_commands">Save custom commands</string>
     <string name="stop">Stop</string>
@@ -55,9 +53,7 @@
     <string name="slower">Slower</string>
     <string name="buzz">Buzz!</string>
     <string name="buzzer_pressed_message">buzzer_pressed</string>
-    <string name="speed_increase_pressed_message">speed_increase_pressed</string>
-    <string name="speed_increase_released_message">speed_increase_released</string>
-    <string name="speed_decrease_pressed_message">speed_decrease_pressed</string>
-    <string name="speed_decrease_released_message">speed_decrease_released</string>
     <string name="buzzer_released_message">buzzer_released</string>
+    <string name="speed_increase_message">speed_increase</string>
+    <string name="speed_decrease_message">speed_decrease</string>
 </resources>
