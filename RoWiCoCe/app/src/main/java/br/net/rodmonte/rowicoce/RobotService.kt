@@ -11,6 +11,14 @@ data class RobotService(private val address: String, private val port: Int) {
     private val TAG = "RobotService"
     private val TIMEOUT = 5000
 
+    fun getPort() : Int {
+        return port
+    }
+
+    fun getAddress(): String {
+        return address
+    }
+
     fun sendMessage(message: String) : Boolean {
 
         try {

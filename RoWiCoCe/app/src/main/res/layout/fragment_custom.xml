@@ -12,15 +12,15 @@
         android:id="@+id/saveCustomCommandsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:clickable="true"
         android:contentDescription="@string/save_custom_commands"
         android:focusable="true"
         android:src="@android:drawable/ic_menu_save"
         app:backgroundTint="@color/design_default_color_background"
-        app:layout_constraintBottom_toBottomOf="@+id/custom6Button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/custom6Button" />
+        app:layout_constraintTop_toBottomOf="@id/custom6Button" />
 
     <Button
         android:id="@+id/custom1Button"

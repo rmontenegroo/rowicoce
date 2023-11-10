@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.os.StrictMode
 import android.util.Log
 import androidx.activity.viewModels
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,6 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import br.net.rodmonte.rowicoce.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class RobotServiceViewModel : ViewModel() {
     private val mutableRobotService = MutableLiveData<RobotService>()
@@ -59,5 +59,6 @@ class MainActivity : AppCompatActivity() {
          */
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
+
     }
 }

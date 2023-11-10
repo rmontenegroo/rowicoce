@@ -13,6 +13,7 @@ import androidx.fragment.app.activityViewModels
 import br.net.rodmonte.rowicoce.R
 import br.net.rodmonte.rowicoce.RobotServiceViewModel
 import br.net.rodmonte.rowicoce.databinding.FragmentMovementBinding
+import com.faizkhan.mjpegviewer.MjpegView
 
 
 class MovementFragment : Fragment() {
@@ -26,6 +27,8 @@ class MovementFragment : Fragment() {
     private val TAG = "Movement Fragment"
 
     private val robotServiceViewModel: RobotServiceViewModel by activityViewModels()
+
+    private var view: MjpegView? = null
 
     private val upCountDownTimer: CountDownTimer = object : CountDownTimer(Long.MAX_VALUE, 250) {
         override fun onTick(l: Long) {
@@ -54,7 +57,26 @@ class MovementFragment : Fragment() {
     ): View {
         _binding = FragmentMovementBinding.inflate(inflater, container, false)
 
+        val address = robotServiceViewModel.robotService.value?.getAddress()
+        val port = robotServiceViewModel.robotService.value?.getPort()?.plus(1)
+
+        view = binding.mjpegid
+        view?.isAdjustHeight = true
+        view?.isAdjustWidth = true
+//        view?.mode1 = MjpegView.MODE_FIT_WIDTH
+        view?.setUrl("http://$address:$port/mjpeg")
+        view?.isRecycleBitmap1 = true
+
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        view?.startStream()
+    }
+    override fun onPause() {
+        super.onPause()
+        view?.stopStream()
     }
 
     @SuppressLint("ClickableViewAccessibility")
